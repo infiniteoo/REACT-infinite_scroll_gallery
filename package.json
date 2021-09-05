@@ -1,0 +1,31 @@
+{
+  "name": "react-infinite_scroll_gallery",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/infiniteoo/REACT-infinite_scroll_gallery.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/infiniteoo/REACT-infinite_scroll_gallery/issues"
+  },
+  "homepage": "https://github.com/infiniteoo/REACT-infinite_scroll_gallery#readme",
+  "dependencies": {
+    "babel-register": "^6.26.0",
+    "concurrently": "^6.2.1",
+    "express": "^4.17.1",
+    "node-fetch": "^3.0.0",
+    "universal-config": "^0.3.0",
+    "unsplash-js": "^7.0.15"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}
