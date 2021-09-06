@@ -14,7 +14,7 @@ const app = express();
 
 app.get("/api/photos", (req, res) => {
   unsplash.photos
-    .listPhotos(1, 30)
+    .listPhotos(req.query.start, req.query.count)
     .then(toJson)
     .then((json) => res.json(json));
 });
@@ -22,5 +22,3 @@ app.get("/api/photos", (req, res) => {
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
-
-

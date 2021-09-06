@@ -3,11 +3,22 @@ import axios from "axios";
 import InfiniteScroll from "react-infinite-scroll-component";
 
 export class Images extends Component {
-    state= {
-        
-    }
+  state = {
+    images: [],
+    count: 30,
+    start: 1,
+  };
+
+  componentDidMount() {
+    const { count, start } = this.state;
+    axios
+      .get(`/api/photos?count=${count}&start=${start}`)
+      .then((res) => this.setState({ images: res.data }));
+    /* .then((res) => console.log("here is the res.data" + res)); */
+  }
   render() {
-    return <div></div>;
+    console.log(this.state);
+    return <div>Hello</div>;
   }
 }
 
