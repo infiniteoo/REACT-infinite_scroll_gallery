@@ -17,6 +17,16 @@ export class Images extends Component {
       .then((res) => this.setState({ images: res.data }));
     /* .then((res) => console.log("here is the res.data" + res)); */
   }
+
+  fetchImages = () => {
+    const { count, start } = this.state;
+    this.setState({ start: this.state.start + count });
+    axios
+      .get(`/api/photos?count=${count}&start=${start}`)
+      .then((res) =>
+        this.setState({ images: this.state.images.concat(res.data) })
+      );
+  };
   render() {
     console.log(this.state);
     return (
